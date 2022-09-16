@@ -1,0 +1,139 @@
+.top{
+    display: flex;
+    align-items: center;
+}
+
+#logo{
+    margin-left: 0;
+    margin-right: auto;
+}
+
+#linklist{
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(45,30,30);
+    padding: 5px;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+#allreviews{
+    table-layout: fixed;
+}
+
+.link{
+    color: rgb(64,190,170);
+}
+
+hr{
+    width: 100%;
+    color: rgb(40,30,30);
+}
+
+customselect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+parent {
+    display: grid;
+    grid-template-columns: 5fr 1fr 5fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+loginselect input:not(:last-of-type){
+    display: flex;
+    width: 100%;
+}
+
+review {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+loginselect { grid-area: 1 / 2 / 2 / 3; }
+
+td{
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+}
+
+.highlighted {
+    background-color: #f1d3bd;
+}
+
+
+form{
+    display: inline;
+}
+
+#mealtable, #allergen, #reviews{
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+}
+
+#newsletter{
+    border: none
+}
+
+.allergenlink{
+    text-decoration: none;
+}
+
+.allergenlink:active{
+    color: rgb(64,190,170);
+}
+
+ul{
+    text-align: center;
+    list-style-position: inside;
+}
+
+h1{
+    text-align: left;
+}
+
+footer ul li{
+    display:inline;
+}
+
+footer ul{
+    text-align: center;
+}
+
+footer ul li:not(:last-of-type){
+    padding-right: 20px;
+    margin-right: 10px;
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: rgb(64,190,170);
+}
+
+form td{
+    border: none
+}
+
+.numbers{
+    display: inline;
+    padding: 50px;
+}
+
+#loremtext{
+    padding: 5px;
+    width: max-content;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+}
+
+fieldset{
+    border-radius: 20px;
+}

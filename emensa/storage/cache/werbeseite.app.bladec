@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+ - Praktikum DBWT. Autoren:
+ - Tim Bering, 3281627
+ - Tarik Glasmacher, 3277950
+-->
+<html lang="de">
+<head>
+ <meta charset="UTF-8">
+ <title>Die E-Mensa</title>
+ <link rel="stylesheet" href="<?php echo \htmlentities('./css/emensastyle.css', ENT_QUOTES, 'UTF-8', false); ?>">
+</head>
+<body>
+
+<span class="top">
+ <a id="logo" href="/"><abbr title="Die E-Mensa"><img
+ src="./img/mensa_logo.png" width="150" height="50" alt="Die E-Mensa"></abbr></a>
+ <?php if(isset($_SESSION['login']) && $_SESSION['login'] == true): ?>
+ <a>angemeldet als <?php echo \htmlentities($_SESSION['email'], ENT_QUOTES, 'UTF-8', false); ?></a> &nbsp &nbsp
+ <a class="link" href="/logout">abmelden</a>
+ <?php else: ?>
+ nicht angemeldet &nbsp &nbsp
+ <a class="link" href="/login">anmelden</a>
+ <?php endif; ?>
+ <nav id="linklist">
+ <a class="link" href="#headline1">Ankündigung</a>
+ |
+ <a class="link" href="#headline2">Speisen</a>
+ |
+ <a class="link" href="#headline3">Zahlen</a><br>
+ |
+ <a class="link" href="#headline4">Kontakt</a>
+ |
+ <a class="link" href="#headline5">Wichtig für uns</a>
+ </nav>
+</span>
+
+
+<hr class="line">
+
+<?php echo $this->yieldContent('content'); ?>
+
+<hr class="line">
+<footer>
+ <ul>
+ <li>(c) E-Mensa GmbH</li>
+ <li>Tim Bering & Tarik Glasmacher</li>
+ <li><a class="link" href="http://eelslap.com/">Impressum</a></li>
+ </ul>
+</footer>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- Praktikum DBWT. Autoren:-->
+<!-- Tim, Bering, 3281627-->
+<!-- Tarik, Glasmacher, 3277950-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<br>
+
+<form method="post" action="formdata.html">
+    <fieldset style="height:600px; width:500px; border-radius:20px">
+
+    <legend style="font-family: 'Comic Sans MS'">Anmeldung</legend>
+
+        <div style="font-family: 'Comic Sans MS'; margin-left:30px">
+
+            <br>
+            Anrede
+            <br>
+        <input type="radio" id="frau_button" name="anrede" value="female">
+        <label for="frau_button">Frau</label>
+            <br>
+        <input type="radio" id="mann_button" name="anrede" value="male">
+        <label for="mann_button">Herr</label>
+            <br> <br>
+
+
+        <label for="vorname">Vorname*</label>
+            <br>
+        <input required type="text" id="vorname" name="vorname" placeholder="Bitte geben Sie Ihren Vornamen ein" style="height:30px; width:250px; font-family: 'Comic Sans MS'">
+            <br><br>
+        <label for="nachname">Nachname*</label>
+            <br>
+        <input required type="text" id="nachname" name="nachname" placeholder="Bitte geben Sie Ihren Nachnamen ein" style="height:30px; width:250px; font-family: 'Comic Sans MS'">
+            <br><br>
+        <label for="email">E-Mail*</label>
+            <br>
+        <input required type="email" id="email" name="email" placeholder="Bitte geben Sie Ihre E-Mail ein" style="height:30px; width:250px; font-family: 'Comic Sans MS'">
+            <br><br>
+
+        <label for="intervall">Benachrichtigungsintervall</label>
+            <br>
+        <select name="intervall" id="intervall" style="height:30px; width:150px; font-family: 'Comic Sans MS'">
+            <option value="Tag">Tag</option>
+            <option value="Woche" selected>Woche</option>
+            <option value="Monat">Monat</option>
+        </select>
+
+        <br><br>
+        <input required type="checkbox" id="datenschutz" name="datenschutz" value="gelesen">
+        <label for="datenschutz">Datenschutzhinweise gelesen</label>
+        <br><br>
+
+        <input type="submit" value="Abschicken" style="height:50px; width:150px; font-family: 'Comic Sans MS'">
+
+            <br><br>
+            *) Eingaben sind Pflicht
+
+        </div>
+
+    </fieldset>
+
+</form>
+
+</body>
+</html>

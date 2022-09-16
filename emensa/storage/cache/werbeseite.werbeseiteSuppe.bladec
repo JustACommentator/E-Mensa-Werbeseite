@@ -1,0 +1,33 @@
+<?php $_shouldextend[1]=1; ?>
+
+<?php $this->startSection('content'); ?>
+ <customselect>
+ <table id="mealtable">
+ <tr>
+ <td><b>Bild</b></td>
+ <td><b>Bezeichnung</b></td>
+ <td><b>Preis intern</b></td>
+ <td><b>Preis extern</b></td>
+ </tr>
+
+ <?php $__currentLoopData = $soup; $this->addLoop($__currentLoopData);$this->getFirstLoop();
+ foreach($__currentLoopData as $s): $loop = $this->incrementLoopIndices();  ?>
+ <tr>
+ <td>
+ <?php if($s['bild'] != null && file_exists("./img/gerichte/" . $s['bild'])): ?>
+ <img width="150" height="100" src="./img/gerichte/<?php echo \htmlentities($s['bild'], ENT_QUOTES, 'UTF-8', false); ?>">
+ <?php else: ?>
+ <img width="150" height="100" src="./img/gerichte/00_image_missing.jpg">
+ <?php endif; ?>
+ </td>
+ <td> <?php echo \htmlentities($s['name'], ENT_QUOTES, 'UTF-8', false); ?> </td>
+ <td style="text-align: right"> <?php echo \htmlentities(number_format($s['preis_intern'], 2), ENT_QUOTES, 'UTF-8', false); ?>€</td>
+ <td style="text-align: right"> <?php echo \htmlentities(number_format($s['preis_extern'], 2), ENT_QUOTES, 'UTF-8', false); ?>€</td>
+ </tr>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+
+ </table>
+ <br>
+ </customselect>
+<?php $this->stopSection(); ?>
+<?php if (isset($_shouldextend[1])) { echo $this->runChild('werbeseite.app'); } ?>
